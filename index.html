@@ -7,7 +7,22 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+    </div>
+    <div x-data="loveCounter: $persist(0)" >
+      <h1>Show some heart</h1>
+      <div x-text="hearts()" >
+      </div>
+      <div>
+          <button @click="love()" >Show 💟</button>
+      </div>
+    </div>
+
+    <div x-data="quoteApp">
+      <div x-text="quote.quote">
+      </div>
+      <button @click="init">click me</button>
+   </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
