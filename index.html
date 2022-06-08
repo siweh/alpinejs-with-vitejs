@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/alpinejs-with-vitejs/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/alpinejs-with-vitejs/assets/index.d9f4433e.js"></script>
+    <link rel="stylesheet" href="/alpinejs-with-vitejs/assets/index.4a841b72.css">
+  </head>
+  <body>
+    <div x-data="loveCounter" class="heartApp">
+      <h1>Show some heart</h1>
+      <div x-text="hearts()" >
+      </div>
+      <div>
+          <button @click="love" >Show 💟</button>
+      </div>
+    </div>
+    <br>
+    <div x-data="quoteApp" class="quote">
+      <h1>Quoute App</h1>
+      <button @click="getQuote()">Next quote 📢</button>
+      <div >
+        <div x-text="quote.quote" class="content"></div>
+        <div>
+          <strong>by </strong><span x-text="quote.author"></span>
+        </div>
+      </div>
+   </div>
+   <hr>
+   <div id="app">
+  </div>
+    
+  </body>
+</html>
